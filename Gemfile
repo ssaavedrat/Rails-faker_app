@@ -45,6 +45,9 @@ gem "bootsnap", require: false
 # Add faker gem for generating fake data
 gem "faker"
 
+# Add annotate gem for adding comments to models
+gem "annotate"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
