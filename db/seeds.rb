@@ -12,6 +12,7 @@ puts "Creating 20 beers..."
   Beer.create(brand: Faker::Beer.brand, 
               name: Faker::Beer.name,
               alcoholic_grade: Faker::Beer.alcohol,
-              ibu: Faker::Beer.ibu  
+              ibu: Faker::Beer.ibu,  
+              yeast_type: Faker::Beer.yeast
             )
 end
