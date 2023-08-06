@@ -1,2 +1,18 @@
-<h1>Bienvenidos a mi App en Heroku</h1>
-<p>Find me in app/views/page/index.html.erb</p>
+<h1 class="mt-5">App en Heroku - Cervezas</h1>
+<%# Button to create a new movie %>
+<%= link_to "Registrar Nueva Cerveza ", page_new_path, class: "btn btn-primary my-2" %>
+<div class="row row-cols-1 row-cols-md-3 g-4 my-3">
+  <% @beer.each do |beer| %>
+    <div class="col">
+      <div class="card h-100">
+        <h2 class="m-3 h-100 text-center"><%= beer.brand %></h2>
+        <div class="card-body">
+          <p class="card-text"><%= beer.name %></p>
+          <p class="card-text"><%= beer.alcoholic_grade %></p>
+          <p class="card-text"><%= beer.ibu %></p>
+          <p class="card-text"><%= beer.yeast_type %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

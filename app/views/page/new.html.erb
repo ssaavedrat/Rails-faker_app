@@ -1,0 +1,31 @@
+<h1 class="my-5">Nueva Cerveza</h1>
+<h2> Ingresa los datos de la nueva cerveza</h2>
+<%= form_with model: @beer, class: "my-5",method: :post do |form|%>
+  <div class="col-6">
+    <div class="my-2">
+      <%= form.label :brand, "Marca", class: "form-label" %>
+      <%= form.text_field :brand, class: "form-control", required:'true'%>
+    </div>
+    <div class="my-2">
+      <%= form.label :name, "Nombre", class: "form-label" %>
+      <%= form.text_field :name, class: "form-control", required:'true'%>
+    </div>
+    <div class="my-2">
+      <%= form.label :alcoholic_grade, "Grado Alcohólico", class: "form-label"%>
+      <%= form.text_field :alcoholic_grade, class: "form-control", required:'true' %>
+    </div>
+    <div class="my-2">
+      <%= form.label :ibu, "IBU", class: "form-label"%>
+      <%= form.text_field :ibu, class: "form-control", required:'true' %>
+    </div>
+    <div class="my-2">
+      <%= form.label :yeast_type, "Tipo de Levadura", class: "form-label"%>
+      <%= form.text_field :yeast_type, class: "form-control", required:'true' %>
+    </div>
+    <div class="my-3">
+      <%= form.submit "Registrar", class: "btn btn-primary" %>
+      <%# Botón para regresar a index %>
+      <%= link_to "Cancelar", root_path, class: "btn btn-secondary" %>
+    </div>
+  </div>
+<% end %>

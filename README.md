@@ -111,3 +111,29 @@ Para que se agreguen los comentarios en los modelos. Por ejemplo,
 class Beer < ApplicationRecord
 end
 ```
+
+## Conectando con Heroku
+
+Para conectar con heroku iniciamos sesión,
+
+```bash
+heroku login
+```
+
+Luego creamos la aplicación en Heroku,
+
+```bash
+heroku create
+```
+
+Luego hacemos un push a Heroku,
+
+```bash
+git push heroku main
+```
+
+## Agregamos vista index y new
+
+Agregamos la vista index para mostrar los datos de la tabla de cervezas. Para ello, creamos el archivo index.html.erb en la carpeta app/views/beers
+
+Agregamos la vista new para crear un nuevo registro en la tabla de cervezas. Para ello, creamos el archivo new.html.erb en la carpeta app/views/beers
