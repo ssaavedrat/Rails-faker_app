@@ -132,8 +132,20 @@ Luego hacemos un push a Heroku,
 git push heroku main
 ```
 
+Es importante que la base de datos esté creada en Heroku (Para esto se debe añadir la extensión Heroku-Postgres a la app). Para ello, utilizamos el comando en la consola de heroku,
+
+```bash
+rails db:migrate
+```
+
+Para crear la base de datos en Heroku/Producción.
+
 ## Agregamos vista index y new
 
 Agregamos la vista index para mostrar los datos de la tabla de cervezas. Para ello, creamos el archivo index.html.erb en la carpeta app/views/beers
 
 Agregamos la vista new para crear un nuevo registro en la tabla de cervezas. Para ello, creamos el archivo new.html.erb en la carpeta app/views/beers
+
+Ejemplo de despliegue en vista index,
+
+![Ejemplo de Despliegue](image.png)
